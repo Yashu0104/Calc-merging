@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f3f4f6;
+    }
+
+    .calculator {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 350px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .display {
+      width: 100%;
+      height: 60px;
+      margin-bottom: 20px;
+      border: none;
+      background: #e0e0e0;
+      border-radius: 8px;
+      padding: 10px;
+      font-size: 2em;
+      text-align: right;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+      transition: background 0.3s;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    button {
+      padding: 15px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 8px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.1s;
+    }
+
+    button:hover {
+      background: #45a049;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      background: #388E3C;
+    }
+
+    button.clear {
+      background: #f44336;
+    }
+
+    button.clear:hover {
+      background: #e53935;
+    }
+
+    button.zero {
+      grid-column: span 2;
+    }
+
+    .operation {
+      background: #2196F3;
+    }
+
+    .operation:hover {
+      background: #1e88e5;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" class="display" disabled>
+    <div class="buttons">
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+      <button class="operation">/</button>
+
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button class="operation">*</button>
+
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button class="operation">-</button>
+
+      <button class="zero">0</button>
+      <button>.</button>
+      <button class="operation">+</button>
+
+      <button class="clear">C</button>
+      <button>=</button>
+    </div>
+  </div>
+</body>
+</html>
